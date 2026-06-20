@@ -1,0 +1,87 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        void: '#0a0a0f',
+        'void-2': '#0d0d16',
+        'void-3': '#12121f',
+        panel: '#0f0f1a',
+        'panel-2': '#141428',
+        border: '#1e1e35',
+        'border-2': '#2a2a4a',
+        velmora: '#7c3aed',
+        'velmora-2': '#6d28d9',
+        'velmora-glow': '#a855f7',
+        yuvi: '#22c55e',
+        'yuvi-dim': '#166534',
+        bhumi: '#f59e0b',
+        'bhumi-dim': '#92400e',
+        agni: '#ef4444',
+        'agni-dim': '#991b1b',
+        vayu: '#06b6d4',
+        'vayu-dim': '#155e75',
+        nex: '#ec4899',
+        'nex-dim': '#9d174d',
+        text: '#e2e8f0',
+        'text-dim': '#94a3b8',
+        'text-muted': '#475569',
+      },
+      fontFamily: {
+        display: ['"Orbitron"', 'monospace'],
+        body: ['"Inter"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      animation: {
+        'orbit-slow': 'orbit 20s linear infinite',
+        'orbit-medium': 'orbit 14s linear infinite',
+        'orbit-fast': 'orbit 9s linear infinite',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'scan-line': 'scanLine 3s linear infinite',
+        'fade-in': 'fadeIn 0.4s ease-out',
+        'slide-up': 'slideUp 0.4s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+      },
+      keyframes: {
+        orbit: {
+          '0%': { transform: 'rotate(0deg) translateX(var(--orbit-r)) rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg) translateX(var(--orbit-r)) rotate(-360deg)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.05)' },
+        },
+        scanLine: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
+        },
+        fadeIn: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        slideUp: {
+          from: { opacity: '0', transform: 'translateY(12px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+      },
+      backdropBlur: { xs: '2px' },
+      boxShadow: {
+        'velmora': '0 0 20px rgba(124, 58, 237, 0.4)',
+        'velmora-lg': '0 0 40px rgba(124, 58, 237, 0.6)',
+        'yuvi': '0 0 20px rgba(34, 197, 94, 0.4)',
+        'bhumi': '0 0 20px rgba(245, 158, 11, 0.4)',
+        'agni': '0 0 20px rgba(239, 68, 68, 0.4)',
+        'vayu': '0 0 20px rgba(6, 182, 212, 0.4)',
+        'nex': '0 0 20px rgba(236, 72, 153, 0.4)',
+        'panel': '0 4px 24px rgba(0, 0, 0, 0.6)',
+        'hud': 'inset 0 0 30px rgba(124, 58, 237, 0.05)',
+      },
+    },
+  },
+  plugins: [],
+}
